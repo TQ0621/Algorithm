@@ -5,7 +5,7 @@
 #include <ctime>
 using namespace std;
 
-struct Timer
+static struct Timer
 {
 private:
     clock_t start;
@@ -14,7 +14,7 @@ public:
     ~Timer() { cout << "Time: " << clock() - start << "ms" << endl; }
 };
 
-void My_nextval(int* const next, const string& sub)
+static void My_nextval(int* const next, const string& sub)
 {
     int sublen = sub.size();
     next[0] = -1;
@@ -41,7 +41,7 @@ void My_nextval(int* const next, const string& sub)
     }
 }
 
-int My_KMP(const string& str, const string& sub)
+static int My_KMP(const string& str, const string& sub)
 {
     Timer timer;
     assert(&str != nullptr && &sub != nullptr);
