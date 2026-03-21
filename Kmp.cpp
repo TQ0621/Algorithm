@@ -43,6 +43,7 @@ static void My_nextval(int* const next, const string& sub)
 
 static int My_KMP(const string& str, const string& sub)
 {
+    //计时器
     Timer timer;
     assert(&str != nullptr && &sub != nullptr);
     int strlen = str.size();
